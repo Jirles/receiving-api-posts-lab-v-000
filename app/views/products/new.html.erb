@@ -30,11 +30,11 @@
       let posting = $.post('/products', formValues);
 
       posting.done(function (data){
-        $('#productName').text(data["name"])
-        $('#productDescription').text(data["description"])
-        $('#productPrice').text("Price: " + data["price"])
-        $('#productInventory').text("Current Inventory: " + data["inventory"])
-      })
-    })
-  })
+        $('#productName').text(data["name"]);
+        $('#productDescription').text(data["description"]);
+        $('#productPrice').text("Price: " + data["price"]);
+        $('#productInventory').text("Current Inventory: " + data["inventory"]);
+      });
+    });
+  });
 </script>

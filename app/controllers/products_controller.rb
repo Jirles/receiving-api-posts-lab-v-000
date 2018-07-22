@@ -19,7 +19,8 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.create(product_params)
-    render json: @product, status: 201
+    #render json: @product, status: 201
+    redirect_to 
   end
 
   def show

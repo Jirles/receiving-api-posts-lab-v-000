@@ -10,7 +10,6 @@ RSpec.describe "Products", type: :feature do
 
   describe "creating products" do
     it 'shows created product and does not redirect', js: :true do
-      Capybara.default_max_wait_time = 5
       visit new_product_path
       fill_in "Name", with: "New Product"
       fill_in "Price", with: "2"

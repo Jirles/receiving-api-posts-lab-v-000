@@ -27,9 +27,8 @@
       event.preventDefault();
 
       let formValues = $(this).serialize();
-      let posting = $.post('/products', formValues);
 
-      posting.done(function (data){
+      $.post('/products', formValues).done(function (data){
         $('#productName').text(data["name"]);
         $('#productDescription').text(data["description"]);
         $('#productPrice').text("Price: " + data["price"]);
